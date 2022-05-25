@@ -49,3 +49,37 @@ TreeSet - não permite elemento null
 * [x] clear()
 * [x] isEmpty()
 
+
+### Java Colections Map - HashMap, LinkedHashMap, TreeMap
+
+Semelhante ao Set
+
+* [x] toString()
+* [x] put()
+* [x] containsKey()
+* [x] get()
+* [x] keySet()
+* [x] values
+* [x] entrySet();
+* [x] getValue();
+* [x] getKey();
+* [x] iterator()
+* [x] iterator().hasNext()
+* [x] iterator().next()
+* [x] LinkedHashMap()
+* [x] new TreeMap()
+* [x] clear()
+* [x] isEmpty()
+
+### Comparable 
+
+override: 
+* [x] ToString
+* [x] CompareTo
+* [x] HashCode
+* [x] Equals
+
+### Comparator
+
+override
+* [x] Compare
