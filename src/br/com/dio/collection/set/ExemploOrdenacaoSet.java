@@ -44,10 +44,21 @@ public class ExemploOrdenacaoSet {
                 + serie.getGenero() + " - " + serie.getTempoEpisodio());
 
 //Pra você
-/*        System.out.println("--\tOrdem gênero\t--");
+        System.out.println("\n--\tOrdem gênero\t--");
 
-          System.out.println("--\tOrdem Tempo Episódio\t--");
- */
+        Set<Serie> minhasSeries4 = new TreeSet<>(new ComparatorGenero());
+
+        minhasSeries4.addAll(minhasSeries);
+        for (Serie serie: minhasSeries4) System.out.println(serie.getNome() + " - "
+                + serie.getGenero() + " - " + serie.getTempoEpisodio());
+
+          System.out.println("\n--\tOrdem Tempo Episódio\t--");
+
+        Set<Serie> minhasSeries5 = new TreeSet<>(new ComparatorGenero());
+
+        minhasSeries5.addAll(minhasSeries);
+        for (Serie serie: minhasSeries5) System.out.println(serie.getNome() + " - "
+                + serie.getGenero() + " - " + serie.getTempoEpisodio());
 
     }
 }
@@ -117,5 +128,23 @@ class ComparatorNomeGeneroTempoEpisodio implements Comparator<Serie>{
         if (genero != 0) return genero;
 
         return Integer.compare(s1.getTempoEpisodio(), s2.getTempoEpisodio());
+    }
+}
+
+class ComparatorGenero implements Comparator<Serie>{
+
+    @Override
+    public int compare(Serie s1, Serie s2) {
+
+        return s1.getGenero().compareTo(s2.getGenero());
+
+    }
+}class ComparatorTempo implements Comparator<Serie>{
+
+    @Override
+    public int compare(Serie s1, Serie s2) {
+
+        return s1.getTempoEpisodio().compareTo(s2.getTempoEpisodio());
+
     }
 }
