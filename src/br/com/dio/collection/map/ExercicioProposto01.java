@@ -24,9 +24,9 @@ public class ExercicioProposto01 {
         populaçãoEstadosNE.put("RN", 3534165);
         System.out.println(populaçãoEstadosNE);
 
-        System.out.println("Confira se o estado da Paraíba (PB) tucson está no dicionário, caso não, adicione " +
+        System.out.println("Confira se o estado da Paraíba (PB) está no dicionário, caso não, adicione " +
                 "PB - 4.039.277: ");
-        populaçãoEstadosNE.put("PB", 4039277);
+        if(!populaçãoEstadosNE.containsKey("PB")) populaçãoEstadosNE.put("PB", 4039277);
         System.out.println(populaçãoEstadosNE);
 
         System.out.println("Exiba a população do estado PE: " + populaçãoEstadosNE.get("PE"));
